@@ -1,0 +1,35 @@
+{
+    "name": "sissokho/laravel-dev-joke",
+    "description": "Get a random dev joke",
+    "keywords": [
+        "sissokho",
+        "laravel",
+        "dev-joke",
+        "api",
+        "integration"
+    ],
+    "homepage": "https://github.com/sissokho/laravel-dev-joke",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sissokho\\LaravelDevJoke\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sissokho\\LaravelDevJoke\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mouhamadou Moustapha SISSOKHO",
+            "email": "siskomouhamed@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0"
+    }
+}
