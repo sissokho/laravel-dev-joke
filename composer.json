@@ -3,14 +3,33 @@
     "description": "Get a random dev joke",
     "keywords": [
         "sissokho",
-        "laravel",
-        "dev-joke",
-        "api",
+        "laravel-dev-joke",
+        "dev-joke-api",
         "integration"
     ],
     "homepage": "https://github.com/sissokho/laravel-dev-joke",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mouhamadou Moustapha SISSOKHO",
+            "email": "siskomouhamed@gmail.com",
+            "homepage": "https://sissokho.netlify.app",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5",
+        "guzzlehttp/guzzle": "^7.4",
+        "laravel/pint": "^1.1",
+        "nunomaduro/larastan": "^2.0",
+        "nunomaduro/collision": "^6.0"
+    },
     "autoload": {
         "psr-4": {
             "Sissokho\\LaravelDevJoke\\": "src/"
@@ -21,15 +40,30 @@
             "Sissokho\\LaravelDevJoke\\Tests\\": "tests/"
         }
     },
-    "authors": [
-        {
-            "name": "Mouhamadou Moustapha SISSOKHO",
-            "email": "siskomouhamed@gmail.com"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "require": {
-        "php": "^8.0"
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sissokho\\LaravelDevJoke\\DevJokeServiceProvider"
+            ],
+            "aliases": {
+                "DevJoke": "Sissokho\\LaravelDevJoke\\Facades\\DevJoke"
+            }
+        }
+    },
+    "scripts": {
+        "stylefix": "./vendor/bin/pint -v",
+        "test:unit": "./vendor/bin/phpunit",
+        "test:types": "./vendor/bin/phpstan analyse",
+        "test:style": "./vendor/bin/pint --test -v",
+        "test": [
+            "@test:style",
+            "@test:types",
+            "@test:unit"
+        ]
     }
 }

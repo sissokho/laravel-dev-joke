@@ -1,0 +1,35 @@
+name: Run static analysis
+
+on:
+  push:
+    paths:
+      - '**.php'
+      - 'phpstan.neon.dist'
+
+jobs:
+  analysis:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest]
+        php: [8.0, 8.1]
+        stability: [prefer-lowest, prefer-stable]
+
+    name: P${{ matrix.php }} - {{ $ matrix.stability  }} - ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+
+      - name: Install composer dependencies
+        run: composer update --prefer-stable --no-interaction --no-progress --ansi
+
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan analyse --no-progress --debug --ansi --error-format=github
