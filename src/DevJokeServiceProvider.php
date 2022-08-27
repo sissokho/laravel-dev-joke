@@ -3,6 +3,7 @@
 namespace Sissokho\LaravelDevJoke;
 
 use Illuminate\Support\ServiceProvider;
+use Sissokho\LaravelDevJoke\Commands\DisplayRandomJokeCommand;
 
 final class DevJokeServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,12 @@ final class DevJokeServiceProvider extends ServiceProvider
                 strval(config('devjoke.api.url'))
             )
         );
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                DisplayRandomJokeCommand::class,
+            ]);
+        }
     }
 
     public function register()
