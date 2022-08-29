@@ -16,8 +16,6 @@ This package requires:
 
 ## Installation
 
-> :warning: This package is not stable yet.
-
 You can install the package via composer:
 
 ```bash
