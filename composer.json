@@ -1,6 +1,6 @@
 {
     "name": "sissokho/laravel-dev-joke",
-    "description": "Get a random dev joke",
+    "description": "This package offer a simple way to fetch a random dev joke from the DevJoke API",
     "keywords": [
         "sissokho",
         "laravel-dev-joke",
