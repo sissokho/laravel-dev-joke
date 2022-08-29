@@ -49,6 +49,18 @@ use Sissokho\LaravelDevJoke\Facades\DevJoke;
 $joke = DevJoke::random();
 ```
 
+## Artisan
+
+An artisan command is provided for you to display a random joke:
+
+```bash
+php artisan devjoke
+```
+
+The joke is displayed like this:
+
+![Screenshot from 2022-08-27 15-19-32](https://user-images.githubusercontent.com/31145894/187036552-5a211546-d02c-418c-8cf5-73d167166540.png)
+
 ## Testing
 
 You can run PHPUnit tests, PHPStan/Larastan static analysis and inspect the code for style errors without changing the files (with Laravel Pint):
