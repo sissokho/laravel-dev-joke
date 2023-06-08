@@ -2,8 +2,8 @@
 
 [![Latest version on packagist](https://img.shields.io/packagist/v/sissokho/laravel-dev-joke?color=blue&style=flat-square)](https://packagist.org/packages/sissokho/laravel-dev-joke)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-![Github Actions tests status](https://img.shields.io/github/workflow/status/sissokho/laravel-dev-joke/Run%20tests?label=tests&style=flat-square)
-![Github Actions static analysis status](https://img.shields.io/github/workflow/status/sissokho/laravel-dev-joke/Run%20static%20analysis?label=static%20analysis&style=flat-square)
+[![Unit Tests](https://github.com/sissokho/laravel-dev-joke/actions/workflows/run-tests.yml/badge.svg)](https://github.com/sissokho/laravel-dev-joke/actions/workflows/run-tests.yml/badge.svg)
+[![Static Analysis](https://github.com/sissokho/laravel-dev-joke/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/sissokho/laravel-dev-joke/actions/workflows/static-analysis.yml/badge.svg)
 
 This package offer a simple way to fetch a random dev joke from this [DevJoke API](https://documenter.getpostman.com/view/16443297/TzkyLee7).
 
