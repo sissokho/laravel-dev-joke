@@ -11,8 +11,10 @@ This package offer a simple way to fetch a random dev joke from this [DevJoke AP
 
 This package requires:
 
--   PHP 8+
--   Laravel 9
+-   PHP 8.1 or higher
+-   Laravel 9.0 or higher
+
+If you are on the PHP version 8.0 just use an older version of this package.
 
 ## Installation
 
