@@ -15,6 +15,7 @@ final class DevJokeServiceProvider extends ServiceProvider
         $this->app->singleton(
             DevJoke::class,
             fn () => new DevJoke(
+                /** @phpstan-ignore-next-line */
                 strval(config('devjoke.api.url'))
             )
         );
