@@ -13,6 +13,7 @@ class DevJokeTest extends TestCase
 {
     /**
      * @test
+     *
      * @group ci-only
      */
     public function it_is_able_to_make_a_real_call_to_the_api(): void

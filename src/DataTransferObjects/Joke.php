@@ -21,7 +21,6 @@ class Joke
 
     /**
      * @param  array<string, string>  $attributes
-     * @return self
      */
     public static function fromArray(array $attributes): self
     {

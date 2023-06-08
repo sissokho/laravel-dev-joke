@@ -20,14 +20,13 @@ class DisplayRandomJokeCommand extends Command
     protected $description = 'Display a random dev joke';
 
     /**
-     * @param  DevJoke  $devJoke
      * @return mixed
      */
     public function handle(DevJoke $devJoke)
     {
         try {
             $joke = $devJoke->random();
-        } catch (ConnectionException | RequestException) {
+        } catch (ConnectionException|RequestException) {
             $this->error('Sorry, could not connect to the DevJoke API.');
 
             return self::FAILURE;
