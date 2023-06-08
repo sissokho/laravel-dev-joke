@@ -4,8 +4,10 @@ namespace Sissokho\LaravelDevJoke\DataTransferObjects;
 
 class Joke
 {
-    public function __construct(public string $question, public string $punchline)
-    {
+    public function __construct(
+        public readonly string $question,
+        public readonly string $punchline
+    ) {
     }
 
     /**
