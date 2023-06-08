@@ -4,8 +4,6 @@ All notable changes to this package will be documented in this file.
 
 ## v2.0.0 - 2023-06-08
 
-### v2.0.0 - 2023-06-08
-
 #### What's Changed
 
 - Laravel 10 support (#5 ).
